@@ -1,14 +1,17 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Shyam.Extensibility.interfaces;
 using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Primitives;
 using System.Reflection;
 
+
 namespace Shyam.WebApi.Extensions
 {
     public static class ServiceExtensions
     {
+
         public static void AddDataLayer(this IServiceCollection services, IConfiguration configuration)
         {
             LoadDependencies(services, configuration, "Shyam.Data.Logic.dll");
@@ -24,6 +27,11 @@ namespace Shyam.WebApi.Extensions
             {
                 cfg.AllowNullCollections = true;
             }, profileAssemblyMakerType);
+        }
+
+        public static void AddCustomAuthentication(this IServiceCollection services, IConfiguration configuration)
+        {
+            
         }
         private static void LoadDependencies(IServiceCollection serviceCollection, IConfiguration configuration, string dependencyAssembly)
         {
