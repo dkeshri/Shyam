@@ -1,43 +1,39 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Shyam.Services.interfaces;
+using Shyam.Services.interfaces.Interfaces;
 using Shyam.Services.Models._auth;
+using Shyam.WebApi.Controllers._base;
 
 namespace Shyam.WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class WeatherForecastController : ApiControllerBase<WeatherForecastController, IWeatherService>
     {
-        IAuthenticationService _authenticationService;
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
+        
 
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IAuthenticationService authenticationService)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger,IMapper mapper, IWeatherService weatherService) 
+            : base(logger,mapper,weatherService) 
         {
-            _logger = logger;
-            _authenticationService = authenticationService;
+           
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet]
+        public ActionResult<IEnumerable<WeatherForecastDto>> Get()
         {
-            UserCredientials userCredientials = new UserCredientials()
-            {
-                UserName = "Deepak",
-                Password = "123456"
-            };
-            _authenticationService.Login(userCredientials);
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            var weatherForecast = ControllerService.GetWeather();
+            return Ok(Mapper.Map<IEnumerable<WeatherForecastDto>>(weatherForecast));
         }
+
+        //[HttpGet("{weatherId:long}")]
+        //public ActionResult<WeatherForecastDto> GetWatherById(long weatherId)
+        //{
+
+        //    //var customer = ControllerService.GetCustomer(customerId);
+        //    //return Ok(Mapper.Map<CustomerDto>(customer));
+
+
+        //}
     }
 }
