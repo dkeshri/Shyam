@@ -1,4 +1,4 @@
-﻿namespace Shyam.Data.Interfaces.Interfaces
+﻿namespace Shyam.Data.Interfaces.Repositories
 {
     public interface IUserRepository
     {

@@ -1,4 +1,4 @@
-﻿using Shyam.Data.Interfaces.Interfaces;
+﻿using Shyam.Data.Interfaces.Repositories;
 
 namespace Shyam.Data.Logic.Repositories
 {
