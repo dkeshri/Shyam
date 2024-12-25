@@ -15,30 +15,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddAutoMapperLayer(typeof(Program));
-
-builder.Services.AddCors(options =>
-            options.AddPolicy("CorsPolicy", builder =>
-                                                builder.AllowAnyOrigin()
-                                                       .AllowAnyHeader()
-                                                       .AllowAnyMethod()
-                                                       .WithExposedHeaders("Content-Disposition")
-                                                       .WithExposedHeaders("X-Pagination")
-            ));
-
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(
-                    options =>
-                    {
-                        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
-                        {
-                            ValidateIssuerSigningKey = true,
-                            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetTokenSecret())),
-                            ValidateIssuer = false,
-                            ValidateAudience = false
-                        };
-                    }
-                );
-
+builder.Services.AddCustomeCors();
+builder.Services.AddCustomAuthentication(builder.Configuration);               
 builder.Services.AddDataLayer(builder.Configuration);
 builder.Services.AddServiceLayer(builder.Configuration);
 

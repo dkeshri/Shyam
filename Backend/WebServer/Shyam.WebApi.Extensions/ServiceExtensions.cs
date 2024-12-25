@@ -1,17 +1,31 @@
 ﻿
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using Shyam.Extensibility.interfaces;
+using Shyam.Services.Extensions;
 using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Primitives;
 using System.Reflection;
+using System.Text;
 
 
 namespace Shyam.WebApi.Extensions
 {
     public static class ServiceExtensions
     {
-
+        public static void AddCustomeCors(this IServiceCollection services)
+        {
+            services.AddCors(options =>
+             options.AddPolicy("CorsPolicy", builder =>
+                                                 builder.AllowAnyOrigin()
+                                                        .AllowAnyHeader()
+                                                        .AllowAnyMethod()
+                                                        .WithExposedHeaders("Content-Disposition")
+                                                        .WithExposedHeaders("X-Pagination")
+             ));
+        }
         public static void AddDataLayer(this IServiceCollection services, IConfiguration configuration)
         {
             LoadDependencies(services, configuration, "Shyam.Data.Logic.dll");
@@ -31,7 +45,19 @@ namespace Shyam.WebApi.Extensions
 
         public static void AddCustomAuthentication(this IServiceCollection services, IConfiguration configuration)
         {
-            
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(
+                    options =>
+                    {
+                        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+                        {
+                            ValidateIssuerSigningKey = true,
+                            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetTokenSecret())),
+                            ValidateIssuer = false,
+                            ValidateAudience = false
+                        };
+                    }
+                );
         }
         private static void LoadDependencies(IServiceCollection serviceCollection, IConfiguration configuration, string dependencyAssembly)
         {
