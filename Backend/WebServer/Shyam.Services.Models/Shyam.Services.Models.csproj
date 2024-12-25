@@ -3,11 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Shyam.Services.Models\Shyam.Services.Models.csproj" />
-  </ItemGroup>
 
 </Project>

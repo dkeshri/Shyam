@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Shyam.Services.interfaces\Shyam.Services.interfaces.csproj" />
+    <ProjectReference Include="..\Shyam.WebApi.Extensions\Shyam.WebApi.Extensions.csproj" />
+  </ItemGroup>
+
 </Project>

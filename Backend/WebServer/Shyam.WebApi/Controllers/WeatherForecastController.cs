@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Shyam.Services.interfaces;
+using Shyam.Services.Models._auth;
 
 namespace Shyam.WebApi.Controllers
 {
@@ -6,6 +8,11 @@ namespace Shyam.WebApi.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        IAuthenticationService _authenticationService;
+        public WeatherForecastController(IAuthenticationService authenticationService)
+        {
+            _authenticationService = authenticationService;
+        }
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -21,6 +28,8 @@ namespace Shyam.WebApi.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+            UserCredientials userCredientials = new UserCredientials();
+            _authenticationService.Login(userCredientials);
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),

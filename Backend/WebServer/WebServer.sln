@@ -3,27 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shyam.WebApi", "Shyam.WebApi\Shyam.WebApi.csproj", "{0BD17671-14D9-4953-8784-C39CAFBD9A3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shyam.WebApi", "Shyam.WebApi\Shyam.WebApi.csproj", "{0BD17671-14D9-4953-8784-C39CAFBD9A3A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{5591999E-71C8-4785-A76A-EB7C6EDD89B3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{CAFEE07F-CD03-47D6-AF92-5070082BD64D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shyam.Services.Logic", "Shyam.Services.Logic\Shyam.Services.Logic.csproj", "{32037108-5E00-4AEA-B279-1F83707F0342}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shyam.Services.Logic", "Shyam.Services.Logic\Shyam.Services.Logic.csproj", "{32037108-5E00-4AEA-B279-1F83707F0342}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shyam.Services.interfaces", "Shyam.Services.interfaces\Shyam.Services.interfaces.csproj", "{2290916E-1D00-4CB2-ACD7-58E46093FB9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shyam.Services.interfaces", "Shyam.Services.interfaces\Shyam.Services.interfaces.csproj", "{2290916E-1D00-4CB2-ACD7-58E46093FB9F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{C14CCF93-3B71-48D8-A087-CF61D910690D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shyam.Data.Logic", "Shyam.Data.Logic\Shyam.Data.Logic.csproj", "{08223C02-3A74-4CAE-87FB-50B48650E364}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shyam.Data.Logic", "Shyam.Data.Logic\Shyam.Data.Logic.csproj", "{08223C02-3A74-4CAE-87FB-50B48650E364}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shyam.Data.Interfaces", "Shyam.Data.Interfaces\Shyam.Data.Interfaces.csproj", "{9B36BD1F-E821-4478-95BD-7AA46026E9CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shyam.Data.Interfaces", "Shyam.Data.Interfaces\Shyam.Data.Interfaces.csproj", "{9B36BD1F-E821-4478-95BD-7AA46026E9CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shyam.WebApi.Dtos", "Shyam.WebApi.Dtos\Shyam.WebApi.Dtos.csproj", "{5B03FB3E-5DE1-464F-A9C7-68F76D679407}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shyam.WebApi.Dtos", "Shyam.WebApi.Dtos\Shyam.WebApi.Dtos.csproj", "{5B03FB3E-5DE1-464F-A9C7-68F76D679407}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shyam.WebApi.Extensions", "Shyam.WebApi.Extensions\Shyam.WebApi.Extensions.csproj", "{A284DA28-6504-4EED-AA05-24FA8E48A613}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shyam.WebApi.Extensions", "Shyam.WebApi.Extensions\Shyam.WebApi.Extensions.csproj", "{A284DA28-6504-4EED-AA05-24FA8E48A613}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shyam.WebApi.Middleware", "Shyam.WebApi.Middleware\Shyam.WebApi.Middleware.csproj", "{52CC1AD3-BB27-4CDA-8E5B-5AE640870C66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shyam.WebApi.Middleware", "Shyam.WebApi.Middleware\Shyam.WebApi.Middleware.csproj", "{52CC1AD3-BB27-4CDA-8E5B-5AE640870C66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedLib", "SharedLib", "{EB100998-1051-4ED8-9895-73BC26255F96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shyam.Extensibility.interfaces", "Shyam.Extensibility.interfaces\Shyam.Extensibility.interfaces.csproj", "{1B1E28FE-85E0-4752-B500-4115FD5A91C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shyam.Services.Models", "Shyam.Services.Models\Shyam.Services.Models.csproj", "{59518941-1F4D-4134-99B3-154F69B20118}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +69,14 @@ Global
 		{52CC1AD3-BB27-4CDA-8E5B-5AE640870C66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52CC1AD3-BB27-4CDA-8E5B-5AE640870C66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52CC1AD3-BB27-4CDA-8E5B-5AE640870C66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B1E28FE-85E0-4752-B500-4115FD5A91C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1E28FE-85E0-4752-B500-4115FD5A91C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1E28FE-85E0-4752-B500-4115FD5A91C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1E28FE-85E0-4752-B500-4115FD5A91C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59518941-1F4D-4134-99B3-154F69B20118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59518941-1F4D-4134-99B3-154F69B20118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59518941-1F4D-4134-99B3-154F69B20118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59518941-1F4D-4134-99B3-154F69B20118}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +90,8 @@ Global
 		{5B03FB3E-5DE1-464F-A9C7-68F76D679407} = {CAFEE07F-CD03-47D6-AF92-5070082BD64D}
 		{A284DA28-6504-4EED-AA05-24FA8E48A613} = {CAFEE07F-CD03-47D6-AF92-5070082BD64D}
 		{52CC1AD3-BB27-4CDA-8E5B-5AE640870C66} = {CAFEE07F-CD03-47D6-AF92-5070082BD64D}
+		{1B1E28FE-85E0-4752-B500-4115FD5A91C0} = {EB100998-1051-4ED8-9895-73BC26255F96}
+		{59518941-1F4D-4134-99B3-154F69B20118} = {5591999E-71C8-4785-A76A-EB7C6EDD89B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {201FEB73-061A-4DE6-B101-3CCF2C3C89DD}
