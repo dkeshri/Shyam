@@ -1,6 +1,6 @@
 ﻿namespace Shyam.Services.Models
 {
-    public class UserServiceModel
+    public class UserServiceModel : EntityBaseServiceModel
     {
 
     }

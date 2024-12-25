@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shyam.Services.Models
 {
-    public class WeatherForecastServiceModel
+    public class WeatherForecastServiceModel : EntityBaseServiceModel
     {
         public DateOnly Date { get; set; }
 

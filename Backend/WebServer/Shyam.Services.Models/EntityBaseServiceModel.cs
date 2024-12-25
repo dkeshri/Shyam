@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shyam.Data.Entities.Base
+namespace Shyam.Services.Models
 {
-    public abstract class EntityBase
+    public abstract class EntityBaseServiceModel
     {
         public DateTime CreatedOn { get; set; }
         public DateTime? ModifiedOn { get; set; }
