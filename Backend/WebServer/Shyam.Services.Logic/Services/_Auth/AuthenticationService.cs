@@ -9,6 +9,7 @@ using Shyam.Services.Models._auth;
 using AutoMapper;
 using Microsoft.Extensions.Logging;
 using Shyam.Data.Interfaces.Repositories;
+using Shyam.Data.Entities;
 
 namespace Shyam.Services.Logic.Services._Auth
 {
@@ -23,10 +24,41 @@ namespace Shyam.Services.Logic.Services._Auth
             TokenService = tokenService;
             UserRepository = userRepository;
         }
-        public AuthenticatedUser Login(UserCredientials authenticatedUser)
+        public AuthenticatedUser Login(UserCredientials userCredientials)
         {
-            UserRepository.AllUser();
-            throw new NotImplementedException();
+            try
+            {
+                User user = UserRepository.GetByUserName(userCredientials.UserName, userCredientials.Password);
+                    
+                if (user != null)
+                {
+                    UserModel userModel = Mapper.Map<UserModel>(user);
+                    return GetAuthenticatedUser(userModel);
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                
+                Logger.LogError(ex, "User Not Found");
+                throw new Exception("User Not Found");
+            }
+
+            
+        }
+
+        private AuthenticatedUser GetAuthenticatedUser(UserModel userModel)
+        {
+            string token = TokenService.CreateToken(userModel);
+            AuthenticatedUser authenticatedUser = new AuthenticatedUser()
+            {
+                UserName = userModel.Username,
+                Token = token
+            };
+            return authenticatedUser;
         }
     }
 }

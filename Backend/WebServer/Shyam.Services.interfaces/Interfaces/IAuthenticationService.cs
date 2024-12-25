@@ -4,6 +4,6 @@ namespace Shyam.Services.interfaces
 {
     public interface IAuthenticationService
     {
-        public AuthenticatedUser Login(UserCredientials authenticatedUser);
+        public AuthenticatedUser Login(UserCredientials userCredientials);
     }
 }

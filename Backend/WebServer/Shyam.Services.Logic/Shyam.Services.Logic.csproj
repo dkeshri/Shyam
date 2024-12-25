@@ -7,12 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+	  <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.3.0" />
 	  <PackageReference Include="System.ComponentModel.Composition" Version="9.0.0" />
+	  <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Shyam.Data.Interfaces\Shyam.Data.Interfaces.csproj" />
     <ProjectReference Include="..\Shyam.Extensibility.interfaces\Shyam.Extensibility.interfaces.csproj" />
+    <ProjectReference Include="..\Shyam.Services.Extensions\Shyam.Services.Extensions.csproj" />
     <ProjectReference Include="..\Shyam.Services.interfaces\Shyam.Services.interfaces.csproj" />
     <ProjectReference Include="..\Shyam.Services.Models\Shyam.Services.Models.csproj" />
   </ItemGroup>

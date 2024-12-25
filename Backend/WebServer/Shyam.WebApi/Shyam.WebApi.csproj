@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Shyam.Services.interfaces\Shyam.Services.interfaces.csproj" />
+    <ProjectReference Include="..\Shyam.WebApi.Dtos\Shyam.WebApi.Dtos.csproj" />
     <ProjectReference Include="..\Shyam.WebApi.Extensions\Shyam.WebApi.Extensions.csproj" />
   </ItemGroup>
 

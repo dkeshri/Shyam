@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shyam.Services.Models._auth;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace Shyam.Services.interfaces
 {
     public interface ITokenService
     {
+        public string CreateToken(UserModel user);
     }
 }

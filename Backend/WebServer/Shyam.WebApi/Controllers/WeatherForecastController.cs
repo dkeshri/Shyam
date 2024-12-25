@@ -25,7 +25,11 @@ namespace Shyam.WebApi.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            UserCredientials userCredientials = new UserCredientials();
+            UserCredientials userCredientials = new UserCredientials()
+            {
+                UserName = "Deepak",
+                Password = "123456"
+            };
             _authenticationService.Login(userCredientials);
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
