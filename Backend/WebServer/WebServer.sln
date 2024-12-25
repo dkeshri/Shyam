@@ -27,9 +27,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shyam.WebApi.Middleware", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedLib", "SharedLib", "{EB100998-1051-4ED8-9895-73BC26255F96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shyam.Extensibility.interfaces", "Shyam.Extensibility.interfaces\Shyam.Extensibility.interfaces.csproj", "{1B1E28FE-85E0-4752-B500-4115FD5A91C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shyam.Extensibility.interfaces", "Shyam.Extensibility.interfaces\Shyam.Extensibility.interfaces.csproj", "{1B1E28FE-85E0-4752-B500-4115FD5A91C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shyam.Services.Models", "Shyam.Services.Models\Shyam.Services.Models.csproj", "{59518941-1F4D-4134-99B3-154F69B20118}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shyam.Services.Models", "Shyam.Services.Models\Shyam.Services.Models.csproj", "{59518941-1F4D-4134-99B3-154F69B20118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shyam.Shared", "Shyam.Shared\Shyam.Shared.csproj", "{B1DD2C7D-2047-428A-B72F-917081B4FA6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shyam.Data.Entities", "Shyam.Data.Entities\Shyam.Data.Entities.csproj", "{8B4F97AE-C4F2-460A-ADB2-1984D055835E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +81,14 @@ Global
 		{59518941-1F4D-4134-99B3-154F69B20118}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59518941-1F4D-4134-99B3-154F69B20118}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59518941-1F4D-4134-99B3-154F69B20118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1DD2C7D-2047-428A-B72F-917081B4FA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1DD2C7D-2047-428A-B72F-917081B4FA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1DD2C7D-2047-428A-B72F-917081B4FA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1DD2C7D-2047-428A-B72F-917081B4FA6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B4F97AE-C4F2-460A-ADB2-1984D055835E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B4F97AE-C4F2-460A-ADB2-1984D055835E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B4F97AE-C4F2-460A-ADB2-1984D055835E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B4F97AE-C4F2-460A-ADB2-1984D055835E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +104,8 @@ Global
 		{52CC1AD3-BB27-4CDA-8E5B-5AE640870C66} = {CAFEE07F-CD03-47D6-AF92-5070082BD64D}
 		{1B1E28FE-85E0-4752-B500-4115FD5A91C0} = {EB100998-1051-4ED8-9895-73BC26255F96}
 		{59518941-1F4D-4134-99B3-154F69B20118} = {5591999E-71C8-4785-A76A-EB7C6EDD89B3}
+		{B1DD2C7D-2047-428A-B72F-917081B4FA6A} = {EB100998-1051-4ED8-9895-73BC26255F96}
+		{8B4F97AE-C4F2-460A-ADB2-1984D055835E} = {C14CCF93-3B71-48D8-A087-CF61D910690D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {201FEB73-061A-4DE6-B101-3CCF2C3C89DD}

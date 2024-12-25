@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Shyam.Data.Interfaces\Shyam.Data.Interfaces.csproj" />
     <ProjectReference Include="..\Shyam.Extensibility.interfaces\Shyam.Extensibility.interfaces.csproj" />
     <ProjectReference Include="..\Shyam.Services.interfaces\Shyam.Services.interfaces.csproj" />
     <ProjectReference Include="..\Shyam.Services.Models\Shyam.Services.Models.csproj" />

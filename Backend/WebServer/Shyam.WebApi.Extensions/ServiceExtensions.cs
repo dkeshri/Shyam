@@ -11,14 +11,20 @@ namespace Shyam.WebApi.Extensions
     {
         public static void AddDataLayer(this IServiceCollection services, IConfiguration configuration)
         {
-            
+            LoadDependencies(services, configuration, "Shyam.Data.Logic.dll");
         }
 
         public static void AddServiceLayer(this IServiceCollection services, IConfiguration configuration)
         {
             LoadDependencies(services, configuration, "Shyam.Services.Logic.dll");
         }
-
+        public static void AddAutoMapperLayer(this IServiceCollection services, params Type[] profileAssemblyMakerType)
+        {
+            services.AddAutoMapper(cfg =>
+            {
+                cfg.AllowNullCollections = true;
+            }, profileAssemblyMakerType);
+        }
         private static void LoadDependencies(IServiceCollection serviceCollection, IConfiguration configuration, string dependencyAssembly)
         {
             var codeBase = Assembly.GetExecutingAssembly().Location;

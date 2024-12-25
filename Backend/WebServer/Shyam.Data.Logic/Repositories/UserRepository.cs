@@ -1,9 +1,13 @@
-﻿using Shyam.Data.Interfaces.Repositories;
+﻿using Shyam.Data.Entities;
+using Shyam.Data.Interfaces.Repositories;
 
 namespace Shyam.Data.Logic.Repositories
 {
-    public class UserRepository : IUserRepository
+    internal class UserRepository : IUserRepository
     {
-
+        public List<User> AllUser()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

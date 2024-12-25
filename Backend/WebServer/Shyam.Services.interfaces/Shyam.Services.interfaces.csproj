@@ -7,7 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Shyam.Services.Models\Shyam.Services.Models.csproj" />
+    <ProjectReference Include="..\Shyam.Shared\Shyam.Shared.csproj" />
   </ItemGroup>
 
 </Project>

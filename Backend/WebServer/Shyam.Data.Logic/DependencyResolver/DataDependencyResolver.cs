@@ -9,18 +9,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shyam.Services.Logic.DependencyResolver
+namespace Shyam.Data.Logic.DependencyResolver
 {
     [Export(typeof(IDependencyResolver))]
-    public class ServiceDependencyResolver : AbstractDependencyResolver
+    public class DataDependencyResolver : AbstractDependencyResolver
     {
         protected override void OnSetUp(IServiceCollection serviceCollection, IConfiguration configuration)
         {
-            serviceCollection.AddAutoMapper(cfg =>
-            {
-                cfg.AllowNullCollections = true;
-            }, typeof(ServiceDependencyResolver));
-            AddServiceDescriptors(serviceCollection, "Shyam.Services.interfaces");
+            //AddServiceDescriptors(serviceCollection, "Shyam.Data.Interfaces.DataContext");
+            //AddServiceDescriptors(serviceCollection, "Shyam.Data.Interfaces.Providers");
+            AddServiceDescriptors(serviceCollection, "Shyam.Data.Interfaces.Repositories");
+
+            //AddServiceDescriptors(serviceCollection, "Shyam.Data.Interfaces.UnitOfWork");
         }
     }
 }

@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Composition" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Shyam.Data.Interfaces\Shyam.Data.Interfaces.csproj" />
+    <ProjectReference Include="..\Shyam.Extensibility.interfaces\Shyam.Extensibility.interfaces.csproj" />
   </ItemGroup>
 
 </Project>
